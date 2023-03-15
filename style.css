@@ -1,3 +1,70 @@
-h1 {
-  color: red;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100vh;
+  font-size: 18px;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 70px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99c7c5;
+  font-family: sans-serif; /* ПОТЕСТИТЬ ДРУГИЕ ВСТРОЕННЫЕ ШРИФТЫ */
+  font-size: 20px;
+  font-weight: 900;
+  color: #fff;
+  text-align: center;
+  line-height: 2;
+}
+
+/* не могу растянуть на всю высоту, пиздос */
+
+section {
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.answer {
+  width: 100px;
+  min-width: 490px;
+  padding: 30px;
+  margin: 30px;
+
+  font-family: sans-serif; /* ПОТЕСТИТЬ ДРУГИЕ ВСТРОЕННЫЕ ШРИФТЫ */
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+
+  background-color: #6db398;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: .2s background linear;
+}
+.answer:hover {
+  background-color: #3b5e50;
 }
