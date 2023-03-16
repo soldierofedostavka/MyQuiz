@@ -11,16 +11,6 @@ html, body {
   font-size: 18px;
 }
 
-.container {
-  max-width: 1200px;
-  padding: 0 20px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
 main {
   height: 100%;
   display: flex;
@@ -41,6 +31,22 @@ header {
   line-height: 2;
 }
 
+.ask {
+  padding: 0 10px;
+  width: 100%;
+  max-width:  1000px;
+}
+
+.answers {
+  max-width: 1200px;
+  padding: 0 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 img {
   width: 150px;
   height: 200px;
@@ -55,8 +61,7 @@ section {
 }
 
 .answer {
-  width: 100%;
-  max-width: 400px;
+  width: 400px;
   padding: 30px 0;
   margin: 15px;
 
@@ -66,6 +71,7 @@ section {
   text-align: center;
 
   background-color: #6db398;
+  border: none;
   border-radius: 8px;
   cursor: pointer;
   transition: .2s background linear;
