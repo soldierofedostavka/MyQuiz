@@ -39,6 +39,7 @@ $answers.forEach((elBtn, iBtn) => {
     if (iBtn === questions[numQuest].correctAnswer && numQuest < questions.length - 1) {
       elBtn.classList.add('answers__btn-correct')
       setTimeout(() => {
+        elBtn.classList.remove('answers__btn-correct')
         numQuest++
         $ask.innerHTML = questions[numQuest].ask
         for (let i = 0; i < $answers.length; i++) { $answers[i].innerHTML = questions[numQuest].answers[i] }
