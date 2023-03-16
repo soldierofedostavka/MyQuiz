@@ -26,7 +26,7 @@ const questions =
 }]
 
 const $ask = document.querySelector('.ask')
-const $answers = document.querySelectorAll('.answer')
+const $answers = document.querySelectorAll('.answers__btn')
 
 $ask.innerHTML = questions[0].ask
 Array.from($answers).map((e, i) => {
@@ -37,13 +37,20 @@ let numQuest = 0
 $answers.forEach((elBtn, iBtn) => {
   elBtn.addEventListener('click', () => {
     if (iBtn === questions[numQuest].correctAnswer && numQuest < questions.length - 1) {
-      numQuest++
-      $ask.innerHTML = questions[numQuest].ask
-      for (let i = 0; i < $answers.length; i++) { $answers[i].innerHTML = questions[numQuest].answers[i] }
-    } 
+      elBtn.classList.add('answers__btn-correct')
+      setTimeout(() => {
+        numQuest++
+        $ask.innerHTML = questions[numQuest].ask
+        for (let i = 0; i < $answers.length; i++) { $answers[i].innerHTML = questions[numQuest].answers[i] }
+      }, 1000)
+    } else {
+      elBtn.classList.add('answers__btn-no-correct')
+      setTimeout(() => {
+        elBtn.classList.remove('answers__btn-no-correct')
+      }, 1000)
+    }
   })
 })
-
 
 //Сделать
 //кнопки со случайным расположением
